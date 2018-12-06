@@ -20,3 +20,9 @@ sudo pulseaudio -D --system
 make 
 sudo ./pi-ano
 ```
+
+# Todo:
+
+* Add more pears
+* Use one pear to cleanly exit, to make sure interrupts are enabled on exit
+

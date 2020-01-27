@@ -22,9 +22,9 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <sys/mman.h>
-#include <stdio.h>		
-#include <fcntl.h>	
-#include <sys/mman.h>		
+#include <stdio.h>
+#include <fcntl.h>
+#include <sys/mman.h>
 #include <unistd.h>
 
 #define NUM_SECONDS   (5)
@@ -213,7 +213,7 @@ static void StreamFinished(void *userData) {
 	printf("Stream Completed: %s\n", data->message);
 }
 
-main() {
+int main() {
 
 	int tone;
 	int n, getout;
@@ -333,9 +333,9 @@ int interrupts(int flag) {
 		*(intrupt + 135) = sav132;	// disable active interrupts
 		sav133 = *(intrupt + 133);
 		*(intrupt + 136) = sav133;
-	} else	{		
+	} else {
 
-        // flag = 1 enable
+		// flag = 1 enable
 		if (sav132 == 0) {
 			printf("Interrupts not disabled\n");
 			return (0);
